@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: SQL_ASCII
+  pool: 5
+  username: ubuntu
+  password: password
+
+development:
+  <<: *default
+  database: routing_notes_development
+
+test:
+  <<: *default
+  database: routing_notes_test
+
+production:
+  <<: *default
+  database: routing_notes_production
